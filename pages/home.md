@@ -1,16 +1,16 @@
 ---
 layout: home
 permalink: "/"
-title: "Hello I'm <a href='/contact'>Robert</a>, a creative <strong>designer</strong> and <em>coder</em>."
-description: "I create beautiful premium themes for Jekyll and the Jamstack 🔨✨"
-image: "/assets/images/homepage.png"
+title: "Hello I'm <a href='/about'>Courtney</a>!"
+description: "I help make the web more <em>useable</em> and <strong>accessible</strong>."
+image: "/assets/images/DesignElement.png"
 
-meta_description: "Jekyll Origin is a premium Jekyll blog theme"
-meta_title: Jekyll Origin
+meta_description: "Courtney Heitman's personal site and blog. Content is mostly about a11y, productivity, and baking."
+meta_title: Courtney Heitman
 
 posts:
   heading: "Latest Posts"
-  limit: 6
+  limit: 3
   sort: date # date | weight
   view_more_button_text: "View Blog"
   view_more_button_link: /blog

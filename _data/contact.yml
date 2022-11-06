@@ -1,6 +1,6 @@
-phone: "+61 0417 123 XXX"
+phone: false
 fax: false
-email: "example@example.com"
-address: "Clem Jones Promenade, South Brisbane QLD 4101"
-map_link: "https://goo.gl/maps/c4WAN7fiRycaH1Gh7"
-show_map_link: true
+email: courtney.heitman@gmail.com
+address: false
+map_link: false
+show_map_link: false
