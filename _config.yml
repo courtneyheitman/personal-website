@@ -77,7 +77,7 @@ analytics:
   google_analytics_id: ""
 
 disqus:
-  shortname: # Your disqus shortcode. leave this blank to disable comments globally
+  shortname: "courtneyheitman" # Your disqus shortcode. leave this blank to disable comments globally
 
 mailchimp:
   form_action_url:
