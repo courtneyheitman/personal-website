@@ -1,5 +1,10 @@
 [
   {
+    "title": "Mastodon",
+    "fa_icon": "fab fa-mastodon",
+    "url": "https://front-end.social/@courtneyheitman"
+  },
+  {
     "title": "Github",
     "fa_icon": "fab fa-github",
     "url": "https://www.github.com/courtneyheitman"
@@ -8,5 +13,10 @@
     "title": "Linkedin",
     "fa_icon": "fab fa-linkedin",
     "url": "https://www.linkedin.com/in/courtney-heitman-89540231/"
+  },
+  {
+    "title": "Polywork",
+    "fa_icon": "fab fa-table-cells",
+    "url": "https://www.polywork.com/courtneyheitman"
   }
 ]
