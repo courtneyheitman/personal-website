@@ -7,7 +7,7 @@ permalink: "/about/"
 image: "/assets/images/DesignElement.png"
 ---
 
-I've never been a person who thinks they need a tome for my about section. I'm much more likely to give a short, witty quip about what I do. So here's a few paragraphs about what I like to do while at work and not.
+I've never been a person who thinks they need a tome for my about section. I'd much rather give a short, witty quip about what I do. That doesn't really work here, so here's a few paragraphs about what I like to do while at work and not.
 
 ## Accessibility
 
