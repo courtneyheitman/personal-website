@@ -1,18 +1,18 @@
 ---
 ---
 // Lightmode colors
-$primary: {{ site.colors.primary | default: '#B351A9' }};
-$primary-2: {{ site.colors.primary_2 | default: '#E0BDDE' }};
+$primary: {{ site.colors.primary | default: '#EC255A' }};
+$primary-2: {{ site.colors.primary_2 | default: '#efc0cc' }};
 $primary-text: {{ site.colors.primary_text | default: '#f9fafb' }};
 $base-bg: {{ site.colors.background | default: '#ffffff' }};
 $base-bg-2: {{ site.colors.background_2 | default: '#f9fafb' }};
 $base-bg-3: {{ site.colors.background_3 | default: '#f1f3f4' }};
 $base-text: {{ site.colors.text | default: '#111827' }};
 $base-text-2: {{ site.colors.text_2 | default: '#4b5563' }};
-$logo-text:  {{ site.colors.logo_text | default: '#B351A9' }};
+$logo-text:  {{ site.colors.logo_text | default: '#111827' }};
 
 // Darkmode colors
-$primary-dark: {{ site.colors.primary_dark | default: '#B75CAE' }};
+$primary-dark: {{ site.colors.primary_dark | default: site.colors.primary }};
 $primary-2-dark: {{ site.colors.primary_2_dark | default: site.colors.primary_2 }};
 $primary-text-dark: {{ site.colors.primary_text_dark | default: site.colors.primary_text }};
 $base-bg-dark: {{ site.colors.background_dark | default: '#121418' }};
@@ -20,7 +20,7 @@ $base-bg-2-dark: {{ site.colors.background_2_dark | default: '#1d2026' }};
 $base-bg-3-dark: {{ site.colors.background_3_dark | default: '#24272d' }};
 $base-text-dark: {{ site.colors.text_dark | default: '#F4F4F5' }};
 $base-text-2-dark: {{ site.colors.text_2_dark | default: '#D1D5DB' }};
-$logo-text-dark: {{ site.colors.logo_text_dark | default: '#B75CAE' }};
+$logo-text-dark: {{ site.colors.logo_text_dark | default: '#F4F4F5' }};
 
 $zs-colors-light: (
     "primary": $primary,
