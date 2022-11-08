@@ -91,7 +91,7 @@ darkmode:
   enable_dark_mode: false
   show_dark_mode_toggle_in_header: false 
   show_dark_mode_toggle_in_bottom: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
-  show_dark_mode_toggle_in_mobile_menu: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
+  show_dark_mode_toggle_in_mobile_menu: true # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
 
 colors:
   #light-mode colors
@@ -140,7 +140,7 @@ logo:
 
 menu: 
   show_dropdown_items_in_mobile_menu: false
-  show_social_media_in_mobile_menu: true
+  show_social_media_in_mobile_menu: false
 
 header: 
   fixed: false
