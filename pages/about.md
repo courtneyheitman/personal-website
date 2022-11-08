@@ -25,4 +25,4 @@ As a former developer, when I'm working on dev teams, I want to improve the deve
 
 Outside of work I often talk about farm life and what working from rural America looks like. I love spending time in the kitchen working on new recipes. My dog Peach is a smartypants and loves to make me laugh.
 
-![Peach, my yellow Labrador Retriever, in a field of soybeans, smelling them.](/assets/images/Peach.jpg)
+![Peach, my yellow Labrador Retriever, in a field of soybeans, smelling them.](/assets/images/gen/content/Peach.jpg)
