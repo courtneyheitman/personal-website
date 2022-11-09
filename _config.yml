@@ -88,7 +88,7 @@ contact_form:
   formspree_endpoint: 
 
 darkmode:
-  enable_dark_mode: true
+  enable_dark_mode: false
   show_dark_mode_toggle_in_header: false 
   show_dark_mode_toggle_in_bottom: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
   show_dark_mode_toggle_in_mobile_menu: true # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
@@ -106,15 +106,15 @@ colors:
   logo_text: "#191a1a"
 
   # dark-mode colors
-  primary_dark: "#EC255A"
-  primary_2_dark: "#eed2d9"
-  primary_text_dark: "#f9fafb"
-  background_dark: "#121418"
-  background_2_dark: "#1d2026"
-  background_3_dark: "#24272d"
-  text_dark: "#F4F4F5"
-  text_2_dark: "#D1D5DB"
-  logo_text_dark: "#F4F4F5"
+  # primary_dark: "#EC255A"
+  #primary_2_dark: "#eed2d9"
+  #primary_text_dark: "#f9fafb"
+  #background_dark: "#121418"
+  #background_2_dark: "#1d2026"
+  #background_3_dark: "#24272d"
+  #text_dark: "#F4F4F5"
+  #text_2_dark: "#D1D5DB"
+  #logo_text_dark: "#F4F4F5"
 
 fonts:
   google_fonts: "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
