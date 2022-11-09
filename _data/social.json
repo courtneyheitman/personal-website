@@ -13,5 +13,10 @@
     "title": "Linkedin",
     "fa_icon": "fab fa-linkedin",
     "url": "https://www.linkedin.com/in/courtney-heitman-89540231/"
+  },
+  {
+    "title": "RSS Feed",
+    "fa_icon": "fa-solid fa-square-rss",
+    "url": "/feed.xml"
   }
 ]
