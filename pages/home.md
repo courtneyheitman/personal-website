@@ -2,7 +2,7 @@
 layout: home
 permalink: "/"
 title: "Hello I'm <a href='/about'>Courtney</a>!"
-description: "I help make the web more <em>useable</em> and <strong>accessible</strong>."
+description: "My passion is making the web more <em>useable</em> and <strong>accessible</strong>."
 image: "/assets/images/DesignElement.png"
 
 meta_description: "Courtney Heitman's personal site and blog. Content is mostly about a11y, productivity, and baking."
