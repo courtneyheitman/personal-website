@@ -118,11 +118,11 @@ colors:
   logo_text_dark: "#F4F4F5"
 
 fonts:
-  google_fonts: "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
-  heading: "Merriweather"
-  base: "Open Sans"
+  google_fonts: "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+  heading: "Playfair Display"
+  base: "Roboto"
   monospace: "Fira Mono"
-  logo: "Open Sans"
+  logo: "Roboto"
 
 logo:
   logo_text: "Courtney Heitman"
