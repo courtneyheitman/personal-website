@@ -4,8 +4,8 @@ title: "The End of an Era"
 date: 2022-11-07T18:43:00Z
 categories: ["Thoughts"]
 description: It feels weird leaving the bird app.
-thumbnail: "/assets/images/gen/blog/221107_birdapp_TN.jpg"
-image: "/assets/images/gen/blog/221107_birdapp.jpg"
+thumbnail: {{ '/assets/images/gen/blog/221107_birdapp_TN.jpg' | relative_url }}
+image: {{ '/assets/images/gen/blog/221107_birdapp.jpg' | relative_url }}
 ---
 
 It's been a part of my life for over 10 years. I've had the same Twitter account when I graduated high school and now through a decade of my adult life. 

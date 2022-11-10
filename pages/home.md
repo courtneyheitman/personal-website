@@ -1,7 +1,7 @@
 ---
 layout: home
 permalink: "/"
-title: "Hello I'm <a href='/about'>Courtney</a>!"
+title: "Hello I'm <a href="{{ '/about' | relative_url }}">Courtney</a>!"
 description: "My passion is making the web more <em>useable</em> and <strong>accessible</strong>."
 image: "/assets/images/homepage-image.png"
 

@@ -4,8 +4,8 @@ title: "Day 5 on Mastodon"
 date: 2022-11-09T19:51:00Z
 categories: ["Thoughts"]
 description: This post paid $8 to be verified.
-thumbnail: "/assets/images/gen/blog/221109_mastodon_TN.jpg"
-image: "/assets/images/gen/blog/221109_mastodon.jpg"
+thumbnail: {{ '/assets/images/gen/blog/221109_mastodon_TN.jpg' | relative_url }}
+image: {{ '/assets/images/gen/blog/221109_mastodon.jpg' | relative_url }}
 ---
 
 It's been 5 days since I started my Mastodon account and uninstalled my Twitter app. I still technically have my Twitter account, but I haven't been on it for more than a couple minutes here and there. 
