@@ -37,7 +37,7 @@
           {% endfor %}
         </div>
       {% elsif date %}
-        <div class="card-date">{{ date | date_to_long_string }}</div>
+        <div class="card-date">{{ date | date: "%B %-d, %Y" }}</div>
       {% endif %}
 
     </div>  
