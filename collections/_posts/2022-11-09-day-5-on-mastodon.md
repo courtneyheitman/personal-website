@@ -25,5 +25,5 @@ I'm still learning the unspoken rules of Mastodon. A few I've figured out:
 
 I will say with five days on Mastodon, and I've already noticed how much less I doomscroll. We'll see what the next 5 days brings.
 
-Photo by <a href="https://unsplash.com/@tanner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tanner Van Dera</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+<span class="unsplash-credit">Photo by <a href="https://unsplash.com/@tanner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tanner Van Dera</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
   
