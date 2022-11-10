@@ -15,7 +15,7 @@ I stumbled into learning accessible development as an intern while I was in coll
 
 ## Project & Program Management
 
-My best friends at work often joke that I'm the Type A of Type As. I will organize anything, and I will make a system for it so it stays organized. 
+I often joke with my best friends at work that I'm the Type A of Type As. I will organize anything, and I will make a system for it so it stays organized. 
 
 As a former developer, when I'm working on dev teams, I want to improve the developer experience. The following are some of my favorite quotes from developers I've worked with:
 * "I notice you try to schedule meetings so we will get an entire morning or afternoon of coding without meetings, and I appreciate it."
@@ -23,6 +23,6 @@ As a former developer, when I'm working on dev teams, I want to improve the deve
 
 ## Personal Life
 
-Outside of work I often talk about farm life and what working from rural America looks like. I love spending time in the kitchen working on new recipes. My dog Peach is a smartypants and loves to make me laugh.
+Outside of work I often talk about farm life and what working from rural America looks like. I love spending time in the kitchen working on new recipes. My dog Peach is a goofball, and we spend lots of time exploring.
 
 ![Peach, my yellow Labrador Retriever, in a field of soybeans, smelling them.](/assets/images/gen/content/Peach.jpg)
