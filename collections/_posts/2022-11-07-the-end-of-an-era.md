@@ -2,7 +2,7 @@
 layout: post
 title: "The End of an Era"
 date: 2022-11-07T18:43:00Z
-categories: ["Thoughts"]
+categories: ["Thought Morsels"]
 description: It feels weird leaving the bird app.
 thumbnail: "/assets/images/gen/blog/221107_birdapp_TN.jpg"
 image: "/assets/images/gen/blog/221107_birdapp.jpg"

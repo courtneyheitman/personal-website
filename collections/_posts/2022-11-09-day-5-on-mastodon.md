@@ -2,7 +2,7 @@
 layout: post
 title: "Day 5 on Mastodon"
 date: 2022-11-09T19:51:00Z
-categories: ["Thoughts"]
+categories: ["Thought Morsels"]
 description: This post paid $8 to be verified.
 thumbnail: "/assets/images/gen/blog/221109_mastodon_TN.jpg"
 image: "/assets/images/gen/blog/221109_mastodon.jpg"
