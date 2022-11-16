@@ -40,5 +40,6 @@ Every time I set up a Github pages site I spend at least 30 minutes completely c
 
 Overall, this project made me realize how much I miss solving coding problems occasionally. It was a nice change of pace from my normal work problem solving which is mostly around how to create organizational change. There are definitely days when I miss being "just a dev" but I also really enjoy being in a leadership position that gets to help make the web better.
 
-<span class="unsplash-credit">Photo by <a href="https://unsplash.com/@tanner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tanner Van Dera</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
+<span class="unsplash-credit">Photo by <a href="https://unsplash.com/@joshuaryanphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joshua Reddekopp</a> on <a href="https://unsplash.com/s/photos/coding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
+  
   
