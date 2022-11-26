@@ -2,7 +2,7 @@
 layout: post
 title: "This year I am thankful for..."
 date: 2022-11-21T18:23:00Z
-categories: ["Technically Speaking"]
+categories: ["Thought Morsels"]
 description: 
 thumbnail: "/assets/images/gen/blog/221121_thanks_TN.jpg"
 image: "/assets/images/gen/blog/221121_thanks.jpg"
