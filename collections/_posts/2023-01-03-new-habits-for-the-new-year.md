@@ -8,7 +8,7 @@ thumbnail: "/assets/images/gen/blog/20230103NewHabits_TN.jpg"
 image: "/assets/images/gen/blog/20230103NewHabits.jpg"
 ---
 
-I'm not the traditional person who sets new years resolutions. I do see the new year as a good place to reflect and change what is or isn't working in my daily, weekly, and monthly routines.
+I'm not one of the people who sets new years resolutions. I do see the new year as a good place to reflect and change what is or isn't working in my daily, weekly, and monthly routines though.
 
 I've noticed this last year that I haven't been doing as much self care to focus on the things that make me feel good. 
 
