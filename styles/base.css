@@ -1,0 +1,360 @@
+/* ============================================================
+   BASE STYLESHEET
+   Update font names and hex codes to match your exact Canva
+   brand kit values before using in production.
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   FONTS
+   Replace with your actual Canva font names.
+   Example import shown using Google Fonts equivalents.
+   ------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+/* ------------------------------------------------------------
+   COLOR TOKENS
+   Approximate hex values — replace with your exact codes.
+   ------------------------------------------------------------ */
+
+:root {
+  /* Main palette */
+  --color-orchid:   #B87BAA;   /* mauve purple-pink */
+  --color-sapphire: #3A5470;   /* dark steel blue */
+  --color-fern:     #AFBB2A;   /* yellow-green */
+  --color-midnight: #0E1821;   /* near-black navy */
+  --color-mist:     #E5E5E5;   /* light gray */
+
+  /* Secondary palette */
+  --color-twilight:     #4A6E8A;   /* medium steel blue */
+  --color-rose-quartz:  #E8D0E0;   /* very light pink */
+  --color-olive:        #7B8A1A;   /* dark olive */
+
+  /* Semantic aliases — adjust to your preference */
+  --color-bg:           #ffffff;
+  --color-bg-subtle:    var(--color-mist);
+  --color-text:         var(--color-midnight);
+  --color-text-muted:   var(--color-twilight);
+  --color-accent:       var(--color-orchid);
+  --color-accent-alt:   var(--color-fern);
+  --color-border:       var(--color-mist);
+}
+
+
+/* ------------------------------------------------------------
+   TYPOGRAPHY TOKENS
+   Replace font family names with your actual Canva fonts.
+   ------------------------------------------------------------ */
+
+:root {
+  --font-serif:  'Playfair Display', Georgia, serif;
+  --font-sans:   'Roboto', 'Helvetica Neue', sans-serif;
+  --font-condensed: 'Roboto Condensed', 'Helvetica Neue', sans-serif;
+
+  /* Type scale */
+  --text-title:       3.5rem;    /* ~56px */
+  --text-subtitle:    2rem;      /* ~32px */
+  --text-heading:     2.25rem;   /* ~36px */
+  --text-subheading:  1.5rem;    /* ~24px */
+  --text-section:     1.125rem;  /* ~18px */
+  --text-body:        1rem;      /* ~16px */
+  --text-quote:       1.25rem;   /* ~20px */
+  --text-caption:     0.875rem;  /* ~14px */
+
+  /* Line heights */
+  --leading-tight:    1.2;
+  --leading-snug:     1.4;
+  --leading-normal:   1.6;
+  --leading-relaxed:  1.75;
+
+  /* Font weights */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-bold:    700;
+}
+
+
+/* ------------------------------------------------------------
+   SPACING & LAYOUT TOKENS
+   ------------------------------------------------------------ */
+
+:root {
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  --container-max: 1200px;
+  --container-text: 720px;   /* comfortable reading width */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}
+
+
+/* ------------------------------------------------------------
+   RESET / BASE
+   ------------------------------------------------------------ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-sapphire);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-orchid);
+}
+
+ul, ol {
+  padding-left: var(--space-6);
+}
+
+
+/* ------------------------------------------------------------
+   TYPOGRAPHY STYLES
+   ------------------------------------------------------------ */
+
+/* Title — large serif, typically hero/page title use */
+.title,
+h1 {
+  font-family: var(--font-serif);
+  font-size: var(--text-title);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  color: var(--color-midnight);
+}
+
+/* Subtitle — sans, medium weight, secondary to title */
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-subtitle);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+  color: var(--color-text-muted);
+}
+
+/* Heading — serif bold, section-level headings */
+.heading,
+h2 {
+  font-family: var(--font-serif);
+  font-size: var(--text-heading);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+  color: var(--color-midnight);
+}
+
+/* Subheading — sans, smaller section headings */
+.subheading,
+h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-subheading);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+  color: var(--color-midnight);
+}
+
+/* Section header — sans bold, labels and category headers */
+.section-header,
+h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-section);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-midnight);
+}
+
+/* Body — default reading text */
+p {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+}
+
+p + p {
+  margin-top: var(--space-4);
+}
+
+/* Quote / Blockquote */
+blockquote,
+.quote {
+  font-family: var(--font-sans);
+  font-size: var(--text-quote);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-relaxed);
+  font-style: italic;
+  color: var(--color-twilight);
+  border-left: 3px solid var(--color-orchid);
+  padding-left: var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+/* Caption — small supporting text */
+.caption,
+figcaption {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
+
+
+/* ------------------------------------------------------------
+   LAYOUT UTILITIES
+   ------------------------------------------------------------ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.container--text {
+  max-width: var(--container-text);
+}
+
+.section {
+  padding-block: var(--space-24);
+}
+
+
+/* ------------------------------------------------------------
+   COMPONENT STUBS
+   Expand these as you build out pages.
+   ------------------------------------------------------------ */
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn--primary {
+  background-color: var(--color-orchid);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-sapphire);
+  color: #ffffff;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-sapphire);
+  border-color: var(--color-sapphire);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-sapphire);
+  color: #ffffff;
+}
+
+/* Card */
+.card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+/* Tag / badge */
+.tag {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-rose-quartz);
+  color: var(--color-midnight);
+}
+
+
+/* ------------------------------------------------------------
+   UTILITY CLASSES
+   ------------------------------------------------------------ */
+
+.text-center  { text-align: center; }
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+
+.text-orchid       { color: var(--color-orchid); }
+.text-sapphire     { color: var(--color-sapphire); }
+.text-fern         { color: var(--color-fern); }
+.text-midnight     { color: var(--color-midnight); }
+.text-muted        { color: var(--color-text-muted); }
+
+.bg-orchid         { background-color: var(--color-orchid); }
+.bg-sapphire       { background-color: var(--color-sapphire); }
+.bg-fern           { background-color: var(--color-fern); }
+.bg-midnight       { background-color: var(--color-midnight); }
+.bg-mist           { background-color: var(--color-mist); }
+.bg-rose-quartz    { background-color: var(--color-rose-quartz); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

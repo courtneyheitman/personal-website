@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courtney Heitman — Program Manager</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <style>
+    body {
+      background-color: #ECE7F0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── Hero layout — desktop 2-column grid ─────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) clamp(220px, 42%, 440px);
+      grid-template-rows: auto auto auto;
+      column-gap: clamp(var(--space-8), 5vw, var(--space-16));
+      align-items: start;
+      padding: var(--space-12) 0;
+      width: 100%;
+    }
+
+    .hero__title {
+      grid-column: 1;
+      grid-row: 1;
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 6vw, 4.75rem);
+      font-weight: var(--weight-bold);
+      line-height: 1.05;
+      color: var(--color-midnight);
+      margin-bottom: clamp(var(--space-4), 3vw, var(--space-8));
+    }
+
+    .hero__title .name {
+      color: var(--color-orchid);
+    }
+
+    .hero__tagline {
+      grid-column: 1;
+      grid-row: 2;
+      font-family: var(--font-sans);
+      font-size: clamp(0.875rem, 2.2vw, 1.4rem);
+      font-weight: var(--weight-regular);
+      line-height: 1.65;
+      color: var(--color-midnight);
+      margin-bottom: clamp(var(--space-6), 3vw, var(--space-8));
+    }
+
+    .hero__tagline strong {
+      font-weight: var(--weight-bold);
+    }
+
+    .hero__tagline em {
+      font-style: italic;
+    }
+
+    .hero__connect {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    .connect-label {
+      font-family: var(--font-sans);
+      font-size: clamp(var(--text-caption), 1.4vw, 1.1rem);
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      color: var(--color-midnight);
+      margin-bottom: var(--space-3);
+    }
+
+    .linkedin-link {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 3px;
+      text-decoration: none;
+      line-height: 0;
+    }
+
+    .linkedin-icon {
+      width: clamp(44px, 5vw, 60px);
+      height: clamp(44px, 5vw, 60px);
+    }
+
+    .linkedin-reg {
+      font-family: var(--font-sans);
+      font-size: 0.55rem;
+      color: var(--color-midnight);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    /* ── Right: photo — spans all 3 rows, centered ───────────── */
+    .hero__photo-wrap {
+      grid-column: 2;
+      grid-row: 1 / 4;
+      align-self: center;
+    }
+
+    .hero__photo {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Mobile: single column, reordered ────────────────────── */
+    @media (max-width: 640px) {
+      .hero {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-6);
+        padding: var(--space-8) 0;
+      }
+
+      .hero__title    { order: 1; margin-bottom: 0; }
+      .hero__photo-wrap { order: 2; width: 100%; }
+      .hero__tagline  { order: 3; margin-bottom: 0; }
+      .hero__connect  { order: 4; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="hero">
+
+      <h1 class="hero__title">Hi, I'm <span class="name">Courtney.</span></h1>
+
+      <p class="hero__tagline">
+        I'M A <strong>PROGRAM MANAGER</strong><br>
+        WHO <em>DESIGNS AND DELIVERS</em><br>
+        SYSTEMS THAT JUST <strong>WORK</strong>.
+      </p>
+
+      <div class="hero__connect">
+        <p class="connect-label">Connect with me</p>
+        <a href="https://www.linkedin.com/in/courtney-heitman/" class="linkedin-link" aria-label="LinkedIn profile">
+          <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-hidden="true">
+            <path d="M8 72C3.6 72 0 68.4 0 64V8C0 3.6 3.6 0 8 0h56c4.4 0 8 3.6 8 8v56c0 4.4-3.6 8-8 8H8z" fill="#0077B5"/>
+            <path d="M10.48 26.19h10.76V61.5H10.48zm5.38-3.84a6.23 6.23 0 110-12.46 6.23 6.23 0 010 12.46zM28.2 26.19h10.55v4.84h.14c1.47-2.78 5.06-5.7 10.41-5.7 11.13 0 13.19 7.33 13.19 16.87V61.5H51.94V44.22c0-4.1-.07-9.38-5.71-9.38-5.72 0-6.6 4.47-6.6 9.08V61.5H28.2z" fill="#fff"/>
+          </svg>
+          <span class="linkedin-reg" aria-hidden="true">®</span>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      </div>
+
+      <!-- Headshot -->
+      <div class="hero__photo-wrap">
+        <img class="hero__photo" src="headshot.png" alt="Courtney Heitman" />
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
