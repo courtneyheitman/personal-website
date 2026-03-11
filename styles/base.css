@@ -21,16 +21,16 @@
 
 :root {
   /* Main palette */
-  --color-orchid:   #B87BAA;   /* mauve purple-pink */
-  --color-sapphire: #3A5470;   /* dark steel blue */
-  --color-fern:     #AFBB2A;   /* yellow-green */
-  --color-midnight: #0E1821;   /* near-black navy */
-  --color-mist:     #E5E5E5;   /* light gray */
+  --color-orchid:   #c17bbb;   /* mauve purple-pink */
+  --color-sapphire: #24577e;   /* dark steel blue */
+  --color-fern:     #bdd547;   /* yellow-green */
+  --color-midnight: #001728;   /* near-black navy */
+  --color-mist:     #f1edf0;   /* light gray */
 
   /* Secondary palette */
-  --color-twilight:     #4A6E8A;   /* medium steel blue */
-  --color-rose-quartz:  #E8D0E0;   /* very light pink */
-  --color-olive:        #7B8A1A;   /* dark olive */
+  --color-twilight:     #437ea8;   /* medium steel blue */
+  --color-rose-quartz:  #e7cae5;   /* very light pink */
+  --color-olive:        #9fab28;   /* dark olive */
 
   /* Semantic aliases — adjust to your preference */
   --color-bg:           #ffffff;
