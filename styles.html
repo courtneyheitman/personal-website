@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Stylesheet Preview</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <style>
+    /* Preview-only layout styles */
+    body { padding: var(--space-8); }
+    .preview-section { margin-bottom: var(--space-16); }
+    .preview-section h5 {
+      font-family: var(--font-sans);
+      font-size: var(--text-caption);
+      font-weight: var(--weight-bold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-orchid);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+    .swatch-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+    .swatch {
+      width: 100px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .swatch__color {
+      height: 60px;
+    }
+    .swatch__label {
+      padding: var(--space-2);
+      font-size: var(--text-caption);
+      font-family: var(--font-sans);
+      background: white;
+    }
+    .type-stack > * + * { margin-top: var(--space-6); }
+    .button-row { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: center; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Colors -->
+    <div class="preview-section">
+      <h5>Colors — Main</h5>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch__color" style="background:var(--color-orchid)"></div>
+          <div class="swatch__label">Orchid</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:var(--color-sapphire)"></div>
+          <div class="swatch__label">Sapphire</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:var(--color-fern)"></div>
+          <div class="swatch__label">Fern</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:var(--color-midnight)"></div>
+          <div class="swatch__label">Midnight</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:var(--color-mist)"></div>
+          <div class="swatch__label">Mist</div>
+        </div>
+      </div>
+
+      <br />
+      <h5>Colors — Secondary</h5>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch__color" style="background:var(--color-twilight)"></div>
+          <div class="swatch__label">Twilight</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:var(--color-rose-quartz)"></div>
+          <div class="swatch__label">Rose Quartz</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:var(--color-olive)"></div>
+          <div class="swatch__label">Olive</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="preview-section">
+      <h5>Typography</h5>
+      <div class="type-stack">
+        <h1>Title — The quick brown fox</h1>
+        <p class="subtitle">Subtitle — The quick brown fox jumps over the lazy dog</p>
+        <h2>Heading — The quick brown fox</h2>
+        <h3>Subheading — The quick brown fox jumps</h3>
+        <h4>Section Header</h4>
+        <p>Body — The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow. Pack my box with five dozen liquor jugs.</p>
+        <blockquote>Quote — "The quick brown fox jumps over the lazy dog, and so begins the story."</blockquote>
+        <figcaption>Caption — Image description or supporting detail text goes here.</figcaption>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="preview-section">
+      <h5>Buttons</h5>
+      <div class="button-row">
+        <a href="#" class="btn btn--primary">Primary Button</a>
+        <a href="#" class="btn btn--secondary">Secondary Button</a>
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="preview-section">
+      <h5>Card</h5>
+      <div class="card" style="max-width:400px">
+        <h3>Card Title</h3>
+        <p style="margin-top:var(--space-3)">This is a sample card component using your brand colors and spacing tokens.</p>
+        <div style="margin-top:var(--space-4)">
+          <span class="tag">Tag</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="preview-section">
+      <h5>Links</h5>
+      <p>This is a paragraph with an <a href="#">inline link</a> using Sapphire that transitions to Orchid on hover.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

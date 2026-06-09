@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="portfolio case-study">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership Direction Model — Courtney Heitman</title>
+  <link rel="stylesheet" href="../styles/base.css" />
+  <style>
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="container">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+
+        <li><a href="../index.html">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="../index.html#portfolio-section" aria-haspopup="true">Portfolio</a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="leadership-direction-model.html" role="menuitem">Leadership Direction Model</a></li>
+            <li role="none"><a href="internal-company-communications.html" role="menuitem">Internal Company Communications</a></li>
+            <li role="none"><a href="accessibility-governance-model.html" role="menuitem">Accessibility Governance Model</a></li>
+            <li role="none"><a href="accessibile-vendor-procurement.html" role="menuitem">Accessible Vendor Procurement</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../index.html#about-section">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       CASE STUDY CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main class="case-study-main">
+    <div class="container container--text">
+
+      <h1 class="case-study-title">Internal Company Communications</h1>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Challenge</h2>
+        <p>Upon joining a 20-person company, internal communication was fragmented and ineffective: long, unread weekly updates, inconsistent company-wide town halls, and poor dissemination of leadership decisions created misalignment, confusion, and low engagement.</p>
+        <p><strong>Project duration:</strong> ~1–2 months</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Solution</h2>
+        <p>Redesigned the company’s internal communications framework by aligning update cadence to leadership decision-making, standardizing company-wide forums, and introducing repeatable templates to improve clarity, consistency, and engagement.</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Results</h2>
+        <ul>
+          <li>Solved low engagement with leadership communications by replacing long-form Friday updates with a structured weekly company update, delivered to all employees after Monday leadership meetings to clearly communicate weekly priorities, decisions, and prior-week outcomes, significantly improving alignment at the start of each workweek.</li>
+          <li>Designed and implemented standardized templates for weekly updates and monthly company town halls, introducing consistent agendas and messaging that increased employee engagement and improved information retention across the organization.</li>
+          <li>Consulted with company leadership to streamline decision communication, ensuring outcomes from leadership meetings were consistently shared company-wide, reducing repeat questions and misaligned work.</li>
+          <li>Provided a repeatable internal communications and recognition framework as a solo owner, establishing scalable practices that reduced organizational chaos and improved transparency during a period of growth.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav   = document.querySelector('.site-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>

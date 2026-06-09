@@ -92,7 +92,7 @@
   --space-24: 6rem;
 
   --container-max: 1200px;
-  --container-text: 720px;   /* comfortable reading width */
+  --container-text: 960px;   /* comfortable reading width */
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -364,7 +364,7 @@ figcaption {
    ------------------------------------------------------------ */
 
 .home, .portfolio {
-  body {
+  & body {
       background-color: var(--color-mist);
       min-height: 100vh;
       display: flex;
@@ -372,7 +372,7 @@ figcaption {
     }
 
     /* ── Hero layout — desktop 2-column grid ─────────────────── */
-    .hero {
+    & .hero {
       display: grid;
       grid-template-columns: minmax(0, 1fr) clamp(220px, 42%, 440px);
       grid-template-rows: auto auto auto;
@@ -406,6 +406,7 @@ figcaption {
       line-height: 1.65;
       color: var(--color-midnight);
       margin-bottom: clamp(var(--space-6), 3vw, var(--space-8));
+      text-transform: uppercase;
     }
 
     .hero__tagline strong {
@@ -416,45 +417,39 @@ figcaption {
       font-style: italic;
     }
 
-    .hero__connect {
+    .hero__hire {
       grid-column: 1;
       grid-row: 3;
+      font-family: var(--font-sans);
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      font-weight: var(--weight-regular);
+      color: var(--color-sapphire);
+      margin-bottom: clamp(var(--space-4), 2vw, var(--space-6));
     }
 
-    .connect-label {
+    .hero__cta {
+      grid-column: 1;
+      grid-row: 4;
+    }
+
+    .hero__cta-text {
       font-family: var(--font-sans);
-      font-size: clamp(var(--text-caption), 1.4vw, 1.1rem);
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
       font-weight: var(--weight-bold);
-      text-transform: uppercase;
       color: var(--color-midnight);
+      line-height: 1.4;
       margin-bottom: var(--space-3);
     }
 
-    .linkedin-link {
-      display: inline-flex;
-      align-items: flex-end;
-      gap: 3px;
-      text-decoration: none;
-      line-height: 0;
+    .hero__cta-arrow {
+      width: clamp(60px, 7vw, 90px);
+      height: auto;
     }
 
-    .linkedin-icon {
-      width: clamp(44px, 5vw, 60px);
-      height: clamp(44px, 5vw, 60px);
-    }
-
-    .linkedin-reg {
-      font-family: var(--font-sans);
-      font-size: 0.55rem;
-      color: var(--color-midnight);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    /* ── Right: photo — spans all 3 rows, centered ───────────── */
+    /* ── Right: photo — spans all 4 rows, centered ───────────── */
     .hero__photo-wrap {
       grid-column: 2;
-      grid-row: 1 / 4;
+      grid-row: 1 / 5;
       align-self: center;
     }
 
@@ -476,6 +471,512 @@ figcaption {
       .hero__title    { order: 1; margin-bottom: 0; }
       .hero__photo-wrap { order: 2; width: 100%; }
       .hero__tagline  { order: 3; margin-bottom: 0; }
-      .hero__connect  { order: 4; }
+      .hero__hire     { order: 4; margin-bottom: 0; }
+      .hero__cta      { order: 5; }
     }
+}
+
+
+/* ============================================================
+   PORTFOLIO PAGE
+   Page-specific overrides and section styles.
+   ============================================================ */
+
+.portfolio {
+  scroll-behavior: smooth;
+
+  /* Override: multi-section scroll page, not flex-centered */
+  & body {
+    display: block;
+    min-height: unset;
+    background-color: var(--color-bg);
+    padding-top: 56px; /* offset for fixed nav */
+  }
+
+  /* ── Fixed navigation ─────────────────────────────────── */
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--color-mist);
+    border-bottom: 1px solid rgba(0, 23, 40, 0.1);
+  }
+
+  /* Hamburger toggle — hidden on desktop */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-2);
+    margin-left: auto;
+  }
+
+  .nav-toggle__bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-midnight);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  /* Animate bars into X when open */
+  .site-nav.is-open .nav-toggle__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .site-nav.is-open .nav-toggle__bar:nth-child(2) {
+    opacity: 0;
+  }
+  .site-nav.is-open .nav-toggle__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    margin: 0;
+    padding: var(--space-4) 0;
+  }
+
+  .nav-links > li > a {
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    font-weight: var(--weight-regular);
+    color: var(--color-midnight);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links > li > a:hover {
+    color: var(--color-orchid);
+  }
+
+  /* Dropdown item */
+  .has-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown {
+    position: absolute;
+    top: calc(100% + var(--space-4));
+    left: 0;
+    min-width: 260px;
+    list-style: none;
+    margin: 0;
+    padding: var(--space-2) 0;
+    background-color: var(--color-mist);
+    border-top: 2px solid var(--color-fern);
+    box-shadow: 0 6px 16px rgba(0, 23, 40, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+  }
+
+  .has-dropdown:hover .nav-dropdown,
+  .has-dropdown:focus-within .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-dropdown a {
+    display: block;
+    padding: var(--space-2) var(--space-6);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    font-weight: var(--weight-regular);
+    color: var(--color-midnight);
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.15s ease;
+  }
+
+  .nav-dropdown a:hover {
+    color: var(--color-orchid);
+    background-color: rgba(186, 109, 180, 0.06);
+  }
+
+  /* Offset sections so fixed nav doesn't cover headings on anchor jump */
+  .hero-section,
+  .portfolio-section,
+  .about-section {
+    scroll-margin-top: 56px;
+  }
+
+  /* Hero section wrapper provides the mist + flex centering
+     that body used to handle on the single-page home layout  */
+  .hero-section {
+    background-color: var(--color-mist);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ── Shared section heading ────────────────────────────── */
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+  }
+
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    white-space: nowrap;
+    color: var(--color-midnight);
+    /* Override text-transform: uppercase inherited from global .section-header rule */
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 2px;
+    background-color: var(--color-fern);
+  }
+
+  .section-rule-blue {
+    flex: 1;
+    height: 2px;
+    background-color: var(--color-sapphire);
+  }
+
+  .section-subtitle {
+    font-family: var(--font-sans);
+    font-size: var(--text-subheading);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-normal);
+    color: var(--color-midnight);
+    text-transform: none;
+    margin-top: calc(-1 * var(--space-8));
+    margin-bottom: var(--space-8);
+  }
+
+
+  /* ── Portfolio section ─────────────────────────────────── */
+
+  .portfolio-section {
+    background-color: var(--color-rose-quartz);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-16);
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(var(--space-8), 4vw, var(--space-16));
+    align-items: start;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-6);
+  }
+
+  .project-icon {
+    width: clamp(100px, 13vw, 160px);
+    height: clamp(100px, 13vw, 160px);
+    color: var(--color-sapphire);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-icon svg,
+  .project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .project-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1rem, 1.5vw, var(--text-subheading));
+    font-weight: var(--weight-bold);
+    line-height: 1.3;
+    color: var(--color-sapphire);
+  }
+
+  .project-title a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+  }
+
+  .project-title a:hover {
+    color: var(--color-midnight);
+  }
+
+
+  /* ── About Me section ──────────────────────────────────── */
+
+  .about-section {
+    background-color: var(--color-mist);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-16);
+  }
+
+  /* "About Me" title renders in sapphire instead of midnight */
+  .about-title {
+    color: var(--color-sapphire);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr clamp(240px, 28%, 320px);
+    gap: clamp(var(--space-12), 6vw, var(--space-24));
+    align-items: start;
+  }
+
+  .about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .sidebar-label {
+    font-family: var(--font-sans);
+    font-size: var(--text-caption);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-midnight);
+    margin-bottom: var(--space-3);
+  }
+
+  .sidebar-resume-link {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    font-weight: var(--weight-bold);
+    color: var(--color-sapphire);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding-bottom: var(--space-1);
+    border-bottom: 2px solid var(--color-fern);
+    transition: color 0.2s ease;
+  }
+
+  .sidebar-resume-link:hover {
+    color: var(--color-orchid);
+  }
+
+  .contact-item {
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--leading-relaxed);
+    color: var(--color-midnight);
+  }
+
+  .contact-item + .contact-item {
+    margin-top: var(--space-1);
+  }
+
+  .contact-item a {
+    color: var(--color-midnight);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .contact-item a:hover {
+    color: var(--color-orchid);
+  }
+
+  /* LinkedIn icon (about sidebar) */
+  .linkedin-link {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 3px;
+    text-decoration: none;
+    line-height: 0;
+  }
+
+  .linkedin-icon {
+    width: clamp(44px, 5vw, 60px);
+    height: clamp(44px, 5vw, 60px);
+  }
+
+  .linkedin-reg {
+    font-family: var(--font-sans);
+    font-size: 0.55rem;
+    color: var(--color-midnight);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+
+  /* ── Responsive ────────────────────────────────────────── */
+
+  @media (max-width: 900px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    /* Nav: show hamburger, collapse links */
+    .nav-toggle {
+      display: flex;
+    }
+
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      padding-block: var(--space-3);
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: var(--space-2) 0 var(--space-4);
+      background-color: var(--color-mist);
+      border-top: 1px solid rgba(0, 23, 40, 0.1);
+      box-shadow: 0 6px 16px rgba(0, 23, 40, 0.08);
+    }
+
+    .site-nav.is-open .nav-links {
+      display: flex;
+    }
+
+    .nav-links > li > a {
+      display: block;
+      padding: var(--space-3) var(--space-6);
+    }
+
+    /* Dropdown: always visible, indented, no animation */
+    .nav-dropdown {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border-top: none;
+      border-left: 2px solid var(--color-fern);
+      margin-left: var(--space-6);
+      min-width: 0;
+      padding: var(--space-1) 0;
+    }
+
+    .nav-dropdown a {
+      padding: var(--space-2) var(--space-4);
+    }
+
+    /* Content sections */
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+/* ============================================================
+   CASE STUDY PAGE
+   Inherits nav styles from .portfolio {}. Add class="portfolio
+   case-study" to <html> on all case study pages.
+   ============================================================ */
+
+.case-study {
+
+  /* Mist background throughout */
+  & body {
+    background-color: var(--color-mist);
+  }
+
+  /* ── Main content area ─────────────────────────────────── */
+
+  .case-study-main {
+    padding-block: clamp(var(--space-12), 8vw, var(--space-12));
+  }
+
+  /* Page title */
+  .case-study-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+    color: var(--color-midnight);
+    margin-bottom: var(--space-12);
+  }
+
+  /* ── Sections: Challenge / Solution / Results ──────────── */
+
+  .case-study-section {
+    margin-bottom: var(--space-12);
+  }
+
+  .case-study-section:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Sub-headings */
+  .case-study-heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-section);    /* 1.125rem */
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-snug);
+    color: var(--color-midnight);
+    text-transform: none;
+    letter-spacing: normal;
+    margin-bottom: var(--space-3);
+  }
+
+  /* Spaced bullet list */
+  .case-study-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  /* ── Responsive ────────────────────────────────────────── */
+
+  @media (max-width: 640px) {
+    .case-study-main {
+      padding-block: var(--space-12);
+    }
+
+    .case-study-title {
+      margin-bottom: var(--space-8);
+    }
+
+    .case-study-section {
+      margin-bottom: var(--space-8);
+    }
+  }
 }

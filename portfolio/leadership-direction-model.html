@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="portfolio case-study">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership Direction Model — Courtney Heitman</title>
+  <link rel="stylesheet" href="../styles/base.css" />
+  <style>
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="container">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+
+        <li><a href="../index.html">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="../index.html#portfolio-section" aria-haspopup="true">Portfolio</a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="leadership-direction-model.html" role="menuitem">Leadership Direction Model</a></li>
+            <li role="none"><a href="internal-company-communications.html" role="menuitem">Internal Company Communications</a></li>
+            <li role="none"><a href="accessibility-governance-model.html" role="menuitem">Accessibility Governance Model</a></li>
+            <li role="none"><a href="accessibile-vendor-procurement.html" role="menuitem">Accessible Vendor Procurement</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../index.html#about-section">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       CASE STUDY CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main class="case-study-main">
+    <div class="container container--text">
+
+      <h1 class="case-study-title">Leadership Direction Model</h1>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Challenge</h2>
+        <p>The organization was operating under the EOS (Entrepreneurial Operating System) model when I joined. But departmental "rocks," scorecards, and priorities were misaligned, siloed, and disconnected. This was resulting in unclear company direction, competing priorities, and no shared definition of what mattered most.</p>
+        <p><strong>Project duration:</strong> 2–3 months</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Solution</h2>
+        <p>Led the transition from EOS to an OKR-based operating model, establishing company-level objectives, aligned departmental key results, and a unified leadership cadence to create clarity, focus, and cross-functional alignment.</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Results</h2>
+        <ul>
+          <li>Developed a company-wide OKR framework for executive leadership and department heads, defining shared company objectives and aligned departmental key results, creating a single, unified direction for organizational priorities.</li>
+          <li>Designed and implemented a structured OKR operating cadence for leadership meetings, replacing EOS-based meetings with objective-driven planning, tracking, and accountability rituals tied directly to company goals.</li>
+          <li>Solved organizational misalignment by translating siloed departmental priorities into shared company objectives, reducing competing initiatives and clarifying what work mattered most across the organization.</li>
+          <li>Provided a unified scorecard model for leadership and teams, aligning metrics and performance tracking to company-level objectives instead of disconnected departmental KPIs.</li>
+          <li>Consulted with leaders across departments to map key results to company objectives, improving cross-functional coordination and accelerating progress toward shared outcomes.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav   = document.querySelector('.site-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>

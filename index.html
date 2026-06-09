@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="home">
+<html lang="en" class="portfolio">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,36 +10,189 @@
 </head>
 <body>
 
-  <div class="container">
-    <div class="hero">
+  <!-- ═══════════════════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="container">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
 
-      <h1 class="hero__title">Hi, I'm <span class="name">Courtney.</span></h1>
+        <li><a href="index.html">Home</a></li>
 
-      <p class="hero__tagline">
-        I'M A <strong>PROGRAM MANAGER</strong><br>
-        WHO <em>DESIGNS AND DELIVERS</em><br>
-        SYSTEMS THAT JUST <strong>WORK</strong>.
-      </p>
+        <li class="has-dropdown">
+          <a href="#portfolio-section" aria-haspopup="true">My Work</a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="portfolio/leadership-direction-model.html" role="menuitem">Leadership Direction Model</a></li>
+            <li role="none"><a href="portfolio/internal-company-communications.html" role="menuitem">Internal Company Communications</a></li>
+            <li role="none"><a href="portfolio/accessibility-governance-model.html" role="menuitem">Accessibility Governance Model</a></li>
+            <li role="none"><a href="portfolio/accessibile-vendor-procurement.html" role="menuitem">Accessible Vendor Procurement</a></li>
+          </ul>
+        </li>
 
-      <div class="hero__connect">
-        <p class="connect-label">Connect with me</p>
-        <a href="https://www.linkedin.com/in/courtney-heitman/" class="linkedin-link" aria-label="LinkedIn profile">
-          <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-hidden="true">
-            <path d="M8 72C3.6 72 0 68.4 0 64V8C0 3.6 3.6 0 8 0h56c4.4 0 8 3.6 8 8v56c0 4.4-3.6 8-8 8H8z" fill="#0077B5"/>
-            <path d="M10.48 26.19h10.76V61.5H10.48zm5.38-3.84a6.23 6.23 0 110-12.46 6.23 6.23 0 010 12.46zM28.2 26.19h10.55v4.84h.14c1.47-2.78 5.06-5.7 10.41-5.7 11.13 0 13.19 7.33 13.19 16.87V61.5H51.94V44.22c0-4.1-.07-9.38-5.71-9.38-5.72 0-6.6 4.47-6.6 9.08V61.5H28.2z" fill="#fff"/>
-          </svg>
-          <span class="linkedin-reg" aria-hidden="true">®</span>
-          <span class="sr-only">LinkedIn</span>
-        </a>
+        <li><a href="#about-section">About Me</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════ -->
+  <div class="hero-section" id="hero-section">
+    <div class="container">
+      <div class="hero">
+
+        <h1 class="hero__title">Hi, I'm <span class="name">Courtney.</span></h1>
+
+        <p class="hero__tagline">
+          I build <strong>scalable, people centered</strong> systems<br>
+          that <em>run well</em> and serve <strong>everyone</strong>.<br>
+        </p>
+
+        <p class="hero__hire">I'm available to hire for fractional operations leadership and digital accessibility consulting.</p>
+
+        <div class="hero__cta">
+          <p class="hero__cta-text">See some of my<br>favorite projects</p>
+          <img class="hero__cta-arrow" src="assets/1.svg" alt="" aria-hidden="true" />
+        </div>
+
+        <!-- Headshot -->
+        <div class="hero__photo-wrap">
+          <img class="hero__photo" src="assets/headshot.png" alt="Courtney Heitman" />
+        </div>
+
       </div>
-
-      <!-- Headshot -->
-      <div class="hero__photo-wrap">
-        <img class="hero__photo" src="headshot.png" alt="Courtney Heitman" />
-      </div>
-
     </div>
   </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PORTFOLIO
+       ═══════════════════════════════════════════════════════ -->
+  <section class="portfolio-section" id="portfolio-section">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="section-title">My Work</h2>
+        <div class="section-rule-blue"></div>
+      </div>
+      <p class="section-subtitle">Real systems for how organizations run and who they're built for.</p>
+
+      <div class="portfolio-grid">
+
+        <!-- Card 1: Leadership Direction Model -->
+        <div class="project-card">
+          <div class="project-icon">
+            <img src="assets/2.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3 class="project-title"><a href="portfolio/leadership-direction-model">Leadership Direction Model</a></h3>
+        </div>
+
+        <!-- Card 2: Internal Company Communications -->
+        <div class="project-card">
+          <div class="project-icon">
+            <img src="assets/3.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3 class="project-title"><a href="portfolio/internal-company-communications.html">Internal Company Communications</a></h3>
+        </div>
+
+        <!-- Card 3: Accessibility Governance Model -->
+        <div class="project-card">
+          <div class="project-icon">
+            <img src="assets/4.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3 class="project-title"><a href="portfolio/accessibility-governance-model.html">Accessibility Governance Model</a></h3>
+        </div>
+
+        <!-- Card 4: Accessible Vendor Procurement -->
+        <div class="project-card">
+          <div class="project-icon">
+            <img src="assets/5.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3 class="project-title"><a href="portfolio/accessibile-vendor-procurement.html">Accessible Vendor Procurement</a></h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT ME
+       ═══════════════════════════════════════════════════════ -->
+  <section class="about-section" id="about-section">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="section-title about-title">About Me</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-body">
+          <p>I’m the Type A of Type As. I love organizing things, and I love building systems that keep them organized even more.</p>
+          <p>Outside of work, I’m often talking about farm life and the realities of working from rural America.</p>
+          <p>I unwind by testing new recipes in the kitchen and spending time exploring with my dog, Peach, who brings joy to every day.</p>
+          <p>If you want someone who can bring clarity and momentum to something complex, and keep people at the center of it, I'd love to talk.</p>
+        </div>
+
+        <aside class="about-sidebar">
+
+          <div class="sidebar-block">
+            <p class="sidebar-label">View My Experience</p>
+            <a href="assets/Resume-CourtneyHeitman.pdf">Resume</a>
+          </div>
+
+          <div class="sidebar-block">
+            <p class="sidebar-label">Work With Me</p>
+            <!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/courtney-heitman/30min'});return false;">Schedule time with me</a>
+<!-- Calendly link widget end -->
+          </div>
+
+          <div class="sidebar-block">
+            <p class="sidebar-label">Connect with me</p>
+            <a href="https://www.linkedin.com/in/courtney-heitman/" class="linkedin-link" aria-label="LinkedIn profile">
+              <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-hidden="true">
+                <path d="M8 72C3.6 72 0 68.4 0 64V8C0 3.6 3.6 0 8 0h56c4.4 0 8 3.6 8 8v56c0 4.4-3.6 8-8 8H8z" fill="#0077B5"/>
+                <path d="M10.48 26.19h10.76V61.5H10.48zm5.38-3.84a6.23 6.23 0 110-12.46 6.23 6.23 0 010 12.46zM28.2 26.19h10.55v4.84h.14c1.47-2.78 5.06-5.7 10.41-5.7 11.13 0 13.19 7.33 13.19 16.87V61.5H51.94V44.22c0-4.1-.07-9.38-5.71-9.38-5.72 0-6.6 4.47-6.6 9.08V61.5H28.2z" fill="#fff"/>
+              </svg>
+              <span class="linkedin-reg" aria-hidden="true">®</span>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav   = document.querySelector('.site-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 
 </body>
 </html>

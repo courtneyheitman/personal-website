@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="portfolio case-study">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership Direction Model — Courtney Heitman</title>
+  <link rel="stylesheet" href="../styles/base.css" />
+  <style>
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="container">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+
+        <li><a href="../index.html">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="../index.html#portfolio-section" aria-haspopup="true">Portfolio</a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="leadership-direction-model.html" role="menuitem">Leadership Direction Model</a></li>
+            <li role="none"><a href="internal-company-communications.html" role="menuitem">Internal Company Communications</a></li>
+            <li role="none"><a href="accessibility-governance-model.html" role="menuitem">Accessibility Governance Model</a></li>
+            <li role="none"><a href="accessibile-vendor-procurement.html" role="menuitem">Accessible Vendor Procurement</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../index.html#about-section">About Me</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       CASE STUDY CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main class="case-study-main">
+    <div class="container container--text">
+
+      <h1 class="case-study-title">Accessibility Governance Model</h1>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Challenge</h2>
+        <p>The organization’s Legal team noted they were lacking a consistent way to measure accessibility, enforce remediation, or demonstrate risk reduction, resulting in repeated audit findings and limited accountability. I was tasked with designing and operationalizing an enterprise-wide accessibility governance model to improve accessibility compliance across approximately 20 digital platforms.</p>
+        <p><strong>Project duration:</strong> ~3–4 years</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Solution</h2>
+        <p>Designed and implemented a scalable accessibility governance framework aligned to WCAG standards, combining annual platform audits, issue prioritization and scoring models, Jira-based remediation tracking, and targeted training to drive measurable, year-over-year accessibility improvements.</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Results</h2>
+        <ul>
+          <li>Developed an enterprise accessibility governance program for ~20 platforms and their cross-functional teams, establishing a standardized annual WCAG success criteria audit based cadence that increased accessibility visibility and reduced untracked accessibility issues by an estimated 60–70% in the first year.</li>
+          <li>Designed and implemented a Jira-based accessibility remediation workflow for engineering teams, including standardized issue labeling, automated filtering, and escalation criteria, reducing long-term stagnant accessibility tickets and improving remediation follow-through by approximately 30% year over year.</li>
+          <li>Implemented a weighted accessibility scoring and prioritization model for platform owners and leadership, translating audit findings into severity-based scores that enabled executive reporting, legal risk assessment, and clear accountability for accessibility outcomes.</li>
+          <li>Provided accessibility training, consultation, and remediation guidance for development and product teams, informed by audit trends and platform scores, improving fix velocity and reducing repeat WCAG violations in subsequent audits by an estimated 40%.</li>
+          <li>Consulted directly with product, engineering, and non-technical teams across the organization to integrate accessibility into active project work, reducing audit rework and shifting accessibility considerations earlier in the development lifecycle.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav   = document.querySelector('.site-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>

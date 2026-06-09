@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="portfolio case-study">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership Direction Model — Courtney Heitman</title>
+  <link rel="stylesheet" href="../styles/base.css" />
+  <style>
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="container">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+
+        <li><a href="../index.html">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="../index.html#portfolio-section" aria-haspopup="true">Portfolio</a>
+          <ul class="nav-dropdown" role="menu">
+            <li role="none"><a href="leadership-direction-model.html" role="menuitem">Leadership Direction Model</a></li>
+            <li role="none"><a href="internal-company-communications.html" role="menuitem">Internal Company Communications</a></li>
+            <li role="none"><a href="accessibility-governance-model.html" role="menuitem">Accessibility Governance Model</a></li>
+            <li role="none"><a href="accessibile-vendor-procurement.html" role="menuitem">Accessible Vendor Procurement</a></li>
+          </ul>
+        </li>
+
+        <li><a href="../index.html#about-section">About Me</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       CASE STUDY CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main class="case-study-main">
+    <div class="container container--text">
+
+      <h1 class="case-study-title">Accessible Vendor Procurement</h1>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Challenge</h2>
+        <p>The organization lacked a consistent, enforceable way to evaluate the accessibility of third-party software, libraries, and vendor-delivered client solutions without extending an already lengthy procurement process. This created accessibility, legal, and client-experience risk across primarily client-facing tools and event deliverables.</p>
+        <p><strong>Project duration:</strong> 3–6 months</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Solution</h2>
+        <p>Designed and implemented an accessibility procurement framework embedded within the existing security review process, using a standardized audit rubric, rapid accessibility assessments, and formal vendor remediation requirements to evaluate third-party products without impacting procurement timelines.</p>
+      </section>
+
+      <section class="case-study-section">
+        <h2 class="case-study-heading">Results</h2>
+        <ul>
+          <li>Developed formal accessibility procurement policy and standards for third-party software, libraries, and vendor-delivered client solutions, embedding accessibility requirements directly into enterprise procurement workflows and governance documentation.</li>
+          <li>Designed and implemented a rapid accessibility audit rubric for 5–15 vendors annually lacking an Accessibility Conformance Report (ACR) sometimes also called a Voluntary Product Accessibility Template (VPAT), enabling consistent, WCAG-aligned evaluations while maintaining standard procurement timelines and avoiding approval bottlenecks.</li>
+          <li>Provided conditional accessibility approvals and remediation requirements for procurement, legal, and security teams, requiring vendors to document issue severity and remediation timelines, reducing downstream accessibility and legal risk for client-facing products.</li>
+          <li>Consulted with engineering and business teams during vendor selection and integration, ensuring third-party tools met baseline accessibility expectations prior to adoption, reducing post-procurement rework and accessibility defects.</li>
+          <li>Solved procurement delays by aligning accessibility reviews with existing security controls, expanding governance coverage across vendor decisions without extending procurement cycle time or disrupting delivery schedules.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav   = document.querySelector('.site-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>

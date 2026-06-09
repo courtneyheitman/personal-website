@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(mdls:*)",
+      "Bash(osascript -e 'set theFile to POSIX file \"\"/Users/courtneyheitman/Downloads/Courtney Heitman.pdf\"\"' -e 'set theText to do shell script \"\"cat \"\" & quoted form of POSIX path of theFile')",
+      "Bash(node --version:*)",
+      "Bash(perl -e:*)",
+      "Bash(ruby:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ls:*)"
+    ]
+  }
+}
