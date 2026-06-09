@@ -493,6 +493,29 @@ figcaption {
     padding-top: 56px; /* offset for fixed nav */
   }
 
+  /* ── Skip nav ─────────────────────────────────────────── */
+
+  .skip-nav {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    z-index: 200;
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-midnight);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    font-weight: var(--weight-bold);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transform: translateY(-200%);
+    transition: transform 0.2s ease;
+  }
+
+  .skip-nav:focus {
+    transform: translateY(0);
+  }
+
   /* ── Fixed navigation ─────────────────────────────────── */
 
   .site-nav {
